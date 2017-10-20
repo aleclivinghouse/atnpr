@@ -1,0 +1,372 @@
+/*Phone Only Media Queries*/
+
+@media only screen and (max-width: 40em) {
+
+    .menu-option {font-size: 14px;}
+
+.footer-links {font-size: 10px;}
+ .footer-image {height: 30px;}
+
+
+} /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+/*Phone Only Media Queries End*/
+
+
+body {background-color: #f2f2f2;}
+.hero-image {position: relative;}
+.background-image {
+    background-size: initial ;
+}
+
+.menu-text {color: white;}
+
+.menu li a {color: white;
+}
+
+ li, a.menu-option:hover {
+ color: #e6e6e6;
+}
+
+ul.dropdown.menu {background-color:  #292c2f;}
+.top-bar, ul.dropdown.menu li {background-color:  #292c2f;}
+
+div.top-bar-right{background-color:  #292c2f;}
+.menu-t {font-weight: bold;}
+.logo-hero {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: -50px;
+    padding-top: 25px;
+}
+
+.logo-nav {height: 30px;}
+#overlay { position: absolute;
+    top: 0;
+    left: 0;
+    width: %100;
+    }
+
+.headliner {
+    position: absolute;
+    left: ;
+  top: 8%;
+  width: 100%;
+    text-transform: ;
+}
+
+.headliner-2 {
+    position: absolute;
+    left: ;
+  top: 1.75%;
+  width: 100%;
+    text-transform: ;
+}
+
+.parallax-window {
+    min-height: 500px;
+    background: transparent;
+}
+
+.parallax-window-small {
+    min-height: 325px;
+    background: transparent;
+}
+
+.button {
+margin-top: 30px;
+border-radius: 5px;
+border-width: 2px;
+border-color: white;
+font-family: 'Karla', ;
+font-weight:500;
+
+}
+
+.button-wrapper { display: block;
+    margin: 0 auto;}
+.button.secondary {opacity:.7;}
+.button.secondary:hover, .button.secondary:focus {
+      background-color: #c83b00; opacity: 1;
+      color: #fefefe; }:
+
+h1 {font-family:'Karla' , sans-serif; font-weight:500 color: ;}
+
+.menu-option {font-family:'Karla' , sans-serif; font-weight:500}
+
+
+
+.second-headline {padding-top: 35px;
+    /*padding-left: 40px;*/
+    font-family: , sans-serif;
+    font-weight: 300;
+    color: darkgray;
+  border-bottom: 2px solid darkgray;
+    margin-bottom:20px;
+}
+
+.room-image {
+    position: relative;
+    display:inline-block; overflow: hidden; }
+
+
+
+.room-title {
+    position: absolute;
+    bottom:0; left: 0;
+    padding-left: 20px;
+}
+
+.room-content {
+    background-color: white;
+    padding: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin-top:-5px;
+}
+
+.card {
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.card-pic {
+   border-top-right-radius: px;
+    border-top-left-radius: px;
+}
+.card-title-t {
+    color: white;
+}
+
+.card-row {padding-top:60px;padding-bottom:40px;}
+
+.card-pic { transition: all .2s ease-in-out; }
+.card-pic:hover {transform: scale(1.4);}
+
+
+
+
+footer {
+  background-color: black;
+  padding-top: 30px;
+    color: white; }
+
+
+
+  #contact { position: relative;
+             height: 100px;
+             padding-left: 60px;
+      padding-top: 35px; }
+
+
+.i-not-social { position: absolute; top:0; left:0;}
+
+i { font-size: 60px; color: white;}
+
+.footer-p {color: white}
+
+.copyright {
+    padding: 20px 0 20px 0;
+    background-color:white
+    margin:0;
+        }
+
+.about-us-content{text-overflow: hidden;}
+
+.menu input, .menu a, .menu button {
+    margin-bottom: 0;
+    color: #fefefe;
+}
+
+
+
+/*Footer*/
+.footer {
+  background-color: #292c2f;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 40px;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 20px;
+  position:relative;
+}
+
+
+
+.footer p.slogan {
+    color: #8d9093;
+    font-size: 1.8rem;
+    margin: 0 0 1rem;
+font-family: "karla"}
+  .footer p.copywrite {
+    color: #8f9296;
+    font-size: 0.875rem;
+    margin: 0;
+font-family: "karla"}
+  .footer .links a {
+    list-style: none;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 3rem 0 0rem;
+    margin: 0; }
+    .footer .links a::after {
+      content: "•";
+      padding: 0 0.4rem 0 0.8rem; }
+    .footer .links a:last-child::after {
+      content: "";
+      padding: 0 0.4rem 0 0.8rem; }
+
+
+.footer-image {height: 100px;}
+
+.social { display: block;
+margin-left:-23px;;
+}
+
+.fi-social-linkedin {font-size: 30px; text-align: center; }
+
+.fi-social-linkedin:hover {color:#c83b00 ;}
+
+
+.modal-image {
+    display: block;
+    margin: auto;
+    height: 200px;
+    margin-bottom:-45px;
+}
+
+textarea {font-size: 12px;}
+
+
+
+table tr:nth-of-type(even) {
+    background-color: transparent;
+}
+
+
+table tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+
+.table-head {
+  font-weight: bold;
+}
+
+.blog-table-wrapper {
+text-align: center;
+color: grey;
+margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.consultation-text-wrapper{
+  color: grey;
+  padding-top: 25px;
+}
+
+.pic-of-mom {display: block;
+margin: auto}
+
+.about-card-content
+{ background-color: white;
+  padding: 10px;
+  margin-left: -30px;
+/*}
+
+
+.mom-about-row {padding-bottom: 40px;
+background-color: #f2f2f2;}
+
+.mom-pic-wrapper {position: relative;}
+
+.pic-title-wrapper {position: absolute;
+   padding-left: 35px;
+}
+
+.mom-pic-text {
+    color: white;
+    font-family: 'Karla';
+    text-align: center;
+}
+
+.media-object-section { background-color:#292c2f;
+padding: 20px;}
+
+
+.mommy-heading {color: #f2f2f2;}
+
+
+.row-our-passion {background-color: #f2f2f2
+  width: 100%;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.about-wrapper {background-color: #292c2f;
+padding-top: 20px;}
+
+.social-about {margin-left: 4px; }
+
+.fi-about {font-size: 40px;}
+
+.fi-about:hover {color:#c83b00;}
+
+.brands-row {padding:50px;}
+
+
+
+.company-pic { height: 100px;
+display: block;
+padding: -10px;
+margin: auto;}
+
+
+.features {
+  text-align: center; }
+
+.features hr {
+    width: 25%;
+    margin: 1rem auto; }
+
+.features .round-icon {
+    background-color: #c83b00;
+    border-radius: 50%;
+    display: table;
+    height: 100px;
+    margin: -61px auto 1rem;
+    width: 100px;
+    font-size: 3rem; }
+
+.features .round-icon span {
+      color: #fff;
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle; }
+
+
+.sandra-pic {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}*/
+
+
+
+/*.thumbnail {
+  position: relative;
+  display: inline-block;
+}
+
+.sandra-heading {
+  color: #f2f2f2;
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  z-index: 2
+}*/
+
+/*.parrallax-margin {
+  margin-top: 400px;
+}*/

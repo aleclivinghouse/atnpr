@@ -1,0 +1,198 @@
+
+{% load staticfiles %}
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atnpr</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/app.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/mom-about-us.css' %}">
+      <link rel="stylesheet"  href="{% static 'css/blog.css' %}">
+    <!-- <link rel="stylesheet"  href="{% static 'css/mom-consultations.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/mom-website-services.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.modal.css' %}"> -->
+   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}" /> -->
+      <!-- <link rel="stylesheet"  href="{% static 'css/mom-about-us.css' %}"> -->
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Tauri|Karla" rel="stylesheet">
+   <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/jquery.modal.css"> -->
+
+      <script src='https://www.google.com/recaptcha/api.js'></script>
+    </head>
+  <body>
+
+
+    <div class="row">
+      <div class="large-12 columns">
+      </div>
+    </div>
+
+
+
+
+
+<!--Top Bar For Large Devices-->
+   <div class="top-bar">
+  <div class="top-bar-left hide-for-small-only">
+    <ul class="dropdown menu" data-dropdown-menu>
+        <li> <img src="{% static 'images/mom-logo-nav.png' %}" class="logo-nav"></li>
+        <li><a class="menu-t" href="{% url 'home' %}">Above the Noise Communications</a></li>
+      <li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+      <ul class="dropdown menu" data-dropdown-menu>
+           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+         <li><a class="menu-option" href="{% url 'about' %}">About Us</a></li>
+          <li><a class="menu-option" href="{% url 'services' %}">Services</a></li>
+          <li><a  class="menu-option" href="{% url 'contact' %}">Consultations</a></li>
+            <li><a  class="menu-option" href="{% url 'blog' %}">News</a></li>
+
+      </ul>
+  </div>
+</div>
+
+ <!-- Parralax window at the top  -->
+   {% if pagename == "Above the Noise Communications" %}
+ <div  class="parallax-window" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+ data-ios-fix="" data-android-fix=""></div>
+   {% endif %}
+
+   {% if pagename != "Above the Noise Communications" %}
+   <div  class="parallax-window-small" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+   data-ios-fix="" data-android-fix=""></div>
+   {% endif %}
+
+<!-- <script>
+   $('.parallax-window').parallax({imageSrc: "{% static 'images/moms-hero-image.png' %}"});
+ </script> -->
+
+  {% if pagename == "Above the Noise Communications" %}
+<section id="overlay"></section>
+<section class="headliner">
+<div class="row">
+<div class="column medium-12 medium-centered columns text-center">
+   <div class="logo-hero-wrapper">
+       <img src="{% static 'images/moms-logo-232x300.png' %}" class="logo-hero">
+   </div>
+<h1 class="text-center headline">{{pagename}}</h1>
+
+   <a href="#form" rel="modal:open" class="secondary button hero-button cons-button" >Get In Touch</a>
+
+</div>
+  </div>
+</section>
+   {% endif %}
+
+  {% if pagename != "Above the Noise Communications" %}
+
+  <section id="overlay"></section>
+    <section class="headliner">
+    <div class="row">
+     <div class="column medium-12 medium-centered columns text-center move-down">
+         <div class="logo-hero-wrapper">
+           <img src="{% static 'images/logo-recropped.jpg' %}" class="logo-hero">
+         </div>
+      <h1 class="text-center headline about-headline">{{pagename}}</h1>
+
+     </div>
+        </div>
+     </section>
+
+  {% endif %}
+
+<!--  OTHER PAGES CODE-->
+
+<!--  OTHER PAGES CODE END->
+
+
+<!-- This is the original content block -->
+<div class="row"></div>
+<div class="blog-table-wrapper">
+<table>
+  <tbody>
+  <tr class="header-row-blog">
+    <td class="table-head">Name</td>
+  <td class="table-head">Description</td>
+    <td class="table-head">Date</td>
+  </tr>
+ {% for post in the_posts %}
+  <tr class="tables-row">
+   <td class="tables-row"><a href="{{post.link}}">{{post.name}}<a/></td>
+   <td class="tables-row">{{post.description}}</td>
+   <td class="tables-row">{{post.date}}</td>
+  </tr>
+  {% endfor %}
+</tbody>
+</table>
+  </div>
+</row>
+<!--  End of the orginal content-->
+
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="row">
+    <div class="small-12 columns">
+      <img class="footer-image" src="{% static 'images/mom-logo-nav.png' %}">
+      <p class="slogan">Above the Noise</p>
+      <p class="links footer-links hide-for-small-only">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About Us</a>
+        <a href="{% url 'services' %}">Services</a>
+         <a href="{% url 'contact' %}">Consultations</a>
+          <a href="{% url 'blog' %}">News</a>
+
+      </p>
+      <ul>
+      <li class="no-bullet social"><a href="https://www.linkedin.com/in/sandralivinghouse"><i class="fi-social-linkedin text-center"></i></a></li>
+      </ul>
+      <p class="copywrite">Copyright Above the Noise © <?php echo date("Y"); ?></p>
+    </div>
+  </div>
+</footer>
+<!--  This is the form that pops up in the modal-->
+<div id="form" class="modal" style="display: none;">
+       <!-- <img src=images/moms-logo-232x300.png class="modal-image"> -->
+       <img src="{% static 'images/moms-logo-232x300.png' %}" class="modal-image">
+       <h5 class="text-center">Above the Noise Communications</h5>
+
+
+
+
+<form id='contactus' action='/process' method='post' accept-charset='UTF-8'>
+<fieldset >
+{% csrf_token %}
+{{form}}
+<div class="g-recaptcha" data-sitekey="6LfMTDQUAAAAAPt-Pt3feGUqv3e2NPnpFqO_84Ni"></div>
+<input type="submit" value="submit" class="button secondary hero-button"/>
+
+</form>
+
+
+</div>
+<!--  form end-->
+
+
+<!-- stuff at the bottom -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static 'js/vendor/jquery.js' %}"></script>
+<script src="{% static 'js/vendor/what-input.js' %}"></script>
+<script src="{% static 'js/jquery-match-height-master-2/dist/jquery.matchHeight-min.js'  %}"></script>
+<script src="{% static 'js/parallax.js'  %}"></script>
+<script src="{% static 'js/vendor/foundation.js'  %}"></script>
+<script src="{% static 'js/app.js'  %}"></script>
+<script src="{% static 'js/jquery.modal.js'  %}" charset="utf-8"></script>
+<script src="{% static 'js/jquery.scrollify.js'  %}" charset="utf-8"></script>
+<script type='text/javascript' src="{% static 'scripts/gen_validatorv31.js'  %}"></script>
+
+
+</body>
+</html>

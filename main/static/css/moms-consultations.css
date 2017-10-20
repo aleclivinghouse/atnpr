@@ -1,0 +1,39 @@
+.consultation-text-wrapper {
+    margin-top: 100px;
+}
+
+.button {margin-bottom: 25px;}
+
+.free-text{
+    color: grey;
+    font-family: 'karla';
+    font-weight: 500;
+}
+
+.free-text-p {color: grey;
+  font-family: sans-serif;
+}
+
+hr {color: grey;}
+
+.button.secondary { background-color:#c83b00; opacity:1;}
+.button.secondary:hover, .button.secondary:focus {
+      background-color: grey; opacity: .7;
+      color: #fefefe; }:
+
+
+/* Matte Black #292c2f*/
+
+/*Thanks page*/
+
+
+
+
+.logo-hero-wrapper {
+  padding-bottom: 50px;
+
+}
+
+.about-headline {
+  padding-top:  90px;
+}
