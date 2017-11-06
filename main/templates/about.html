@@ -25,7 +25,7 @@
  </div>
  <div class="top-bar-right">
      <ul class="dropdown menu" data-dropdown-menu>
-       <li><a  href="/" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+       <li><a  href="/" class="menu-option show-for-small-only"><img src="{%static 'images/mom-logo-nav.png' %}" class="logo-nav"></a>
      <li><a class="menu-option" href="/about">About Us</a></li>
       <li><a class="menu-option" href="/services">Services</a></li>
       <li><a  class="menu-option" href="/contact">Consultations</a></li>
@@ -38,8 +38,9 @@
 <!--Top Bar End-->
 <!--Copy Over-->
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
-     data-ios-fix="" data-android-fix=""></div>
+    <div class="parallax-window hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+     data-ios-fix="True" data-android-fix=""></div>
+        <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
 
 
 <section id="overlay"></section>
@@ -70,7 +71,8 @@
  <div class="media-object-section">
       <div class="mom-pic-wrapper">
      <div class="thumbnail">
-     <img src="{% static 'images/sandra-pic.jpg' %}" class="show-for-large">
+     <!-- <img src="{% static 'images/sandra-pic.jpg' %}" class="show-for-large"> -->
+     <img src='{{profilePic.image.url}}' class="show-for-large">
    </div>
      <div class="mom-heading-wrapper">
        <h4 class="mommy-heading show-for-large">Sandra Livinghouse</h4>
@@ -81,8 +83,8 @@
    <div class="text-wrapper-about">
    <p class="about-p">Getting a technology innovation adopted in the market these days takes experience and tenacity. The noise is deafening and the competition brutal.  Markets must be defined, product leadership and mindshare built, products launched, customers acquired, categories created, brands established, and chasms crossed. Enter Above the Noise Communications. Whether your goal is to simply build greater mindshare and sales, go public, or sell your company to a large Silicon Valley leader, we can help.
   </p>
-   <p class="about-p">Based in Silicon Valley, we work with clients, media and industry influencers globally to help build brands.  We provide expert corporate communications, content marketing and social media services to enterprise technology companies from venture-funded startups to large public organizations.</p>
-   <p class="about-p">Sandra Livinghouse, Principal, has more than 20 years of corporate communications experience in agency and corporate settings.  She founded Above the Noise Communications in 1997, and has since advised market leaders such as Cisco, Apple, Sun Microsystems, Borland and Advanced Micro Devices, as well as a wide variety of technology startups. </p>
+   <p class="about-p">Based in Silicon Valley, we work with clients, media and industry influencers globally to help build brands. We provide expert corporate communications, content marketing and social media services to enterprise technology companies from venture-funded startups to large public organizations.</p>
+   <p class="about-p">Sandra Livinghouse, Principal, has more than 20 years of corporate communications experience in agency and corporate settings. She founded Above the Noise Communications in 1997 and has since advised market leaders such as Cisco, Apple, Sun Microsystems, Borland and Advanced Micro Devices, as well as a wide variety of technology startups. </p>
 
 
        <p>  <li class=" social-about no-bullet social text-left"><a href="https://www.linkedin.com/in/sandralivinghouse"><i class="fi-social-linkedin fi-about"></i></a></li> </p>
@@ -93,7 +95,7 @@
 
 <div class="row-our-passion">
    <div class="small-12 columns">
-      <h1 class="text-left second-headline hide-for-small-only">Our Passion</h1>
+      <h1 class="text-left second-headline hide-for-small-only">Our Commitment</h1>
    </div>
 </div>
 
@@ -118,7 +120,7 @@
        </div>
        <h3>We're Different</h3>
        <hr>
-       <p class="icon-p">We know its 90% execution, and we don't act like consultants without skin in the game.  We care about your success, and bring the best to the table.
+       <p class="icon-p">We know its 90% execution, and we don't act like consultants without skin in the game.  We care about your success and bring the best to the table.
        </p>
      </div>
 
@@ -128,15 +130,16 @@
        </div>
        <h3>We're Savvy</h3>
        <hr>
-       <p class="icon-p">Today's marketplace demands active company-sourced newsroom feeds and content marketing, in addition to more traditional PR and communications programs.   Our team delivers on all counts.
+       <p class="icon-p">Today's marketplace demands active company-sourced newsroom feeds and content marketing in addition to more traditional PR and communications programs.   Our team delivers on all counts.
 </p>
      </div>
    </div>
 
 
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+    <div class="parallax-window hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
      data-ios-fix="" data-android-fix=""></div>
+       <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
 
 
 

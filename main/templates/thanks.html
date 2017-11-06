@@ -46,7 +46,7 @@
   </div>
   <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
-           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="{% static 'images/mom-logo-nav.png' %}" class="logo-nav"></a>
          <li><a class="menu-option" href="{% url 'about' %}">About Us</a></li>
           <li><a class="menu-option" href="{% url 'services' %}">Services</a></li>
           <li><a  class="menu-option" href="{% url 'contact' %}">Consultations</a></li>
@@ -63,8 +63,9 @@
    {% endif %}
 
    {% if pagename != "Above the Noise Communications" %}
-   <div  class="parallax-window-small" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+   <div  class="parallax-window-small hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
    data-ios-fix="" data-android-fix=""></div>
+    <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
    {% endif %}
 
 <!-- <script>
@@ -109,8 +110,8 @@
 
 <!--  THIS IS THE ORIRINAL CONTENT-->
 <div class="row text-center" style="padding: 50px;">
-<h3>Thank You</h3>
-<h4>Your message has been recieved</h>
+
+<h3>Your message has been received</h3>
 </div>
 <!-- ORIGINAL CONTENT END -->
 

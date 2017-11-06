@@ -3,6 +3,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+def upload_location(instance, filename):
+    return "%s/%s" %(instance.id, filename)
+
+
+
+
 # Create your models here.
 class Post(models.Model):
     name = models.CharField(max_length=120, default="default text")
@@ -14,3 +20,8 @@ class Post(models.Model):
 
     def __unicode__(self):
         return self.name
+
+class profilePic(models.Model):
+    image = models.ImageField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

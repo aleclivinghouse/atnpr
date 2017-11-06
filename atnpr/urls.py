@@ -31,3 +31,7 @@ urlpatterns = [
     url(r'^thanks$', main_views.thanks, name='thanks'),
     url(r'^nope$', main_views.nope, name='nope'),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

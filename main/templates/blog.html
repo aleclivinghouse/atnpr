@@ -11,6 +11,7 @@
     <link rel="stylesheet"  href="{% static 'css/app.css' %}">
     <link rel="stylesheet"  href="{% static 'css/mom-about-us.css' %}">
       <link rel="stylesheet"  href="{% static 'css/blog.css' %}">
+
     <!-- <link rel="stylesheet"  href="{% static 'css/mom-consultations.css' %}">
     <link rel="stylesheet"  href="{% static 'css/mom-website-services.css' %}">
     <link rel="stylesheet" href="{% static 'css/jquery.modal.css' %}"> -->
@@ -48,7 +49,7 @@
   </div>
   <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
-           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="{% static 'images/mom-logo-nav.png'%}" class="logo-nav"></a>
          <li><a class="menu-option" href="{% url 'about' %}">About Us</a></li>
           <li><a class="menu-option" href="{% url 'services' %}">Services</a></li>
           <li><a  class="menu-option" href="{% url 'contact' %}">Consultations</a></li>
@@ -60,13 +61,22 @@
 
  <!-- Parralax window at the top  -->
    {% if pagename == "Above the Noise Communications" %}
- <div  class="parallax-window" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+
+ <div  class="parallax-window show-for-medium-up" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
  data-ios-fix="" data-android-fix=""></div>
+ <!-- <div  class="show-for-small-only">
+  <img src="{% static 'images/moms-hero-image.jpg' %}" />
+</div> -->
+
+
    {% endif %}
 
    {% if pagename != "Above the Noise Communications" %}
-   <div  class="parallax-window-small" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
-   data-ios-fix="" data-android-fix=""></div>
+   <div class="show-for-medium-up">
+     <div class="parallax-window-small hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+     data-ios-fix="" data-android-fix=""></div>
+     <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
+   </div>
    {% endif %}
 
 <!-- <script>
@@ -110,30 +120,73 @@
 <!--  OTHER PAGES CODE-->
 
 <!--  OTHER PAGES CODE END->
+<!--  -->
+
+<!-- <div class="col-lg-6">
+  <div id="demo" class="scroll-text">
+    <ul>
+      <li><a href="#">This text will scroll from bottom to up</a></li>
+      <li><a href="#">This text will scroll from bottom to up</a></li>
+      <li><a href="#">This text will scroll from bottom to up</a></li>
+      <li><a href="#">This text will scroll from bottom to up</a></li>
+      <li><a href="#">This text will scroll from bottom to up</a></li>
+    </ul>
+  </div>
+</div> -->
 
 
 <!-- This is the original content block -->
-<div class="row"></div>
-<div class="blog-table-wrapper">
-<table>
-  <tbody>
-  <tr class="header-row-blog">
-    <td class="table-head">Name</td>
-  <td class="table-head">Description</td>
-    <td class="table-head">Date</td>
-  </tr>
- {% for post in the_posts %}
-  <tr class="tables-row">
-   <td class="tables-row"><a href="{{post.link}}">{{post.name}}<a/></td>
-   <td class="tables-row">{{post.description}}</td>
-   <td class="tables-row">{{post.date}}</td>
-  </tr>
-  {% endfor %}
-</tbody>
-</table>
+<div class="row hide-for-small-only">
+  <div class="column">
+
+<div class="blog-table-wrapper scroll-text" id="demo">
+  <ul>
+   {% for post in the_posts %}
+  <li><h4><a href="{{post.link}}">{{post.name}}</a><h4/></li>
+  <li><h6>{{post.date}}<h6/></li>
+   {% endfor %}
+  </ul>
+</div>
+</div>
+</div>
+
+
+<div class="row show-for-small-only">
+  <div class="column">
+      <h3 class="text-center">Sorry, you cannot view this feature on a mobile device.</h3>
   </div>
-</row>
+</div>
+
 <!--  End of the orginal content-->
+
+<!-- <div class="row">
+  <!--Table Start  -->
+<!-- <table>
+<tbody>
+<tr class="header-row-blog">
+  <td class="table-head">Name</td>
+<td class="table-head">Date</td>
+  <!-- <td class="table-head">Description/td> -->
+<!-- </tr>
+<div class="blog-table-wrapper scroll-text" id="demo">
+  <ul>
+{% for post in the_posts %}
+<li>
+<tr class="tables-row">
+<td class="tables-row"><a href="{{post.link}}">{{post.name}}<a/></td>
+<td class="tables-row">{{post.date}}</td>
+
+</tr>
+</li>
+{% endfor %}
+  </ul>
+</div>
+
+
+</tbody>
+</table> -->
+<!--Table End  -->
+</div>
 
 
 <!-- footer -->
@@ -154,7 +207,7 @@
       <ul>
       <li class="no-bullet social"><a href="https://www.linkedin.com/in/sandralivinghouse"><i class="fi-social-linkedin text-center"></i></a></li>
       </ul>
-      <p class="copywrite">Copyright Above the Noise © <?php echo date("Y"); ?></p>
+      <p class="copywrite">Copyright Above the Noise ©</p>
     </div>
   </div>
 </footer>
@@ -188,9 +241,12 @@
 <script src="{% static 'js/jquery-match-height-master-2/dist/jquery.matchHeight-min.js'  %}"></script>
 <script src="{% static 'js/parallax.js'  %}"></script>
 <script src="{% static 'js/vendor/foundation.js'  %}"></script>
+
 <script src="{% static 'js/app.js'  %}"></script>
 <script src="{% static 'js/jquery.modal.js'  %}" charset="utf-8"></script>
 <script src="{% static 'js/jquery.scrollify.js'  %}" charset="utf-8"></script>
+  <script src="{% static 'js/jquery.scrollbox.js' %}"></script>
+
 <script type='text/javascript' src="{% static 'scripts/gen_validatorv31.js'  %}"></script>
 
 

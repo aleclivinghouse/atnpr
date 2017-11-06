@@ -46,7 +46,7 @@
   </div>
   <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
-           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+           <li><a  href="{% url 'home' %}" class="menu-option show-for-small-only"><img src="{% static 'images/mom-logo-nav.png' %}" class="logo-nav"></a>
          <li><a class="menu-option" href="{% url 'about' %}">About Us</a></li>
           <li><a class="menu-option" href="{% url 'services' %}">Services</a></li>
           <li><a  class="menu-option" href="{% url 'contact' %}">Consultations</a></li>
@@ -63,8 +63,10 @@
    {% endif %}
 
    {% if pagename != "Above the Noise Communications" %}
-   <div  class="parallax-window-small" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+   <div  class="parallax-window-small hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
    data-ios-fix="" data-android-fix=""></div>
+   <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
+ </div>
    {% endif %}
 
 <!-- <script>
@@ -112,19 +114,22 @@
     <div class="medium-6 columns">
       <h4 class="service-head text-center">Corporate Positioning and Strategic Counsel</h4>
       <hr>
-      <p class="service-p text-center">We start client engagements by delivering a corporate communications plan.  We conduct a corporate/product line audits, craft messaging and positioning, and prepare a communications timeline for PR activities and expected results.  We thoroughly research your market and competitors, and examine where you can get an edge.  </p>
+      <p class="service-p text-center">We start client engagements by delivering a corporate communications plan.  We conduct a corporate/product line audits, craft messaging and positioning, and prepare a communications timeline for PR activities and expected results. We thoroughly research your market competitors and examine where you can get an edge.  </p>
      </div>
-    <div class="medium-6 columns">
+    <div class="medium-6 columns service-img">
        <div class="img-wrapper">
-        <img src="{% static 'images/pattern-for-mom.png' %}" style="width: 600px; height :300px;" class="show-for-medium">
+        <img src="{% static 'images/chess-white.png' %}" class="show-for-medium service-icon">
+        <img src="{% static 'images/pattern-for-mom.png' %}" style="width: 600px; height :300px;" class="show-for-medium" >
         </div>
      </div>
   </div>
 
 <div class="row services-row">
 
-    <div class="medium-6 columns">
-        <img src="{% static 'images/mom-pattern-2.png' %}" style="width: 600px; height :300px;" class="show-for-medium">
+    <div class="medium-6 columns service-img">
+         <img src="{% static 'images/presentation.png' %}" class="show-for-medium service-icon">
+        <img src="{% static 'images/mom-pattern-2.png' %}" style="width: 600px; height :300px;" class="show-for-medium ">
+
      </div>
  <div class="medium-6 columns ">
       <h4 class="service-head text-center">Spokesperson and Media Training</h4>
@@ -135,20 +140,22 @@
 
 <div class="row services-row">
     <div class="medium-6 columns ">
-      <h4 class="service-head text-center">Public, Media, and Analyist Relations</h4>
+      <h4 class="service-head text-center">Public, Media, and Analyst Relations</h4>
       <hr>
-      <p class="service-p text-center">Above the Noise develops a full storytelling approach, including message crafting, press and analyst presentations, targeted media outreach and story placement.  We work with the full range of industry influencers and leverage our contacts, including media, bloggers, influencers and analysts.   We drive corporate PR programs as well as technology/product communications.
+      <p class="service-p text-center">Above the Noise develops a full storytelling approach, including message crafting, press and analyst presentations, targeted media outreach and story placement.  We work with the full range of industry influencers, and leverage our contacts, including media, bloggers, influencers and analysts.   We drive corporate PR programs as well as technology/product communications.
 </p>
      </div>
-    <div class="medium-6 columns">
+    <div class="medium-6 columns service-img">
+        <img src="{% static 'images/megaphone-copy.png' %}" class="show-for-medium service-icon">
         <img src="{% static 'images/pattern-for-mom.png' %}" style="width: 600px; height :300px;" class="show-for-medium">
      </div>
   </div>
 
 <div class="row services-row">
 
-    <div class="medium-6 columns">
-      <img src="{% static 'images/mom-pattern-2.png' %}" style="width: 600px; height :300px;" class="show-for-medium">
+    <div class="medium-6 columns service-img">
+         <img src="{% static 'images/certificate.png' %}" class="show-for-medium service-icon">
+      <img src="{% static 'images/mom-pattern-2.png' %}" style="width: 600px; height :300px;" class="show-for-medium ">
      </div>
  <div class="medium-6 columns">
       <h4 class="service-head text-center">Product Launches and Awards</h4>
@@ -163,8 +170,10 @@
         <hr>
       <p class="service-p text-center">For today’s market, companies need to have an automated corporate newsroom with newsfeeds, blogs, and ability to stand out on social media sites.   We work with clients to develop a social media plan and editorial calendars for content delivery.  We also help develop content, including writing blogs, creating rich media/infographics, and shooting videos and photography.   Programs include earned and paid content for company amplification.</p>
      </div>
-    <div class="medium-6 columns">
-        <img src="{% static 'images/pattern-for-mom.png' %}" style="width: 600px; height :300px;" class="show-for-medium">
+    <div class="medium-6 columns service-img">
+             <img src="{% static 'images/search.png' %}" class="show-for-medium service-icon">
+        <img src="{% static 'images/pattern-for-mom.png' %}" style="width: 600px; height :300px;" class="show-for-medium ">
+
      </div>
   </div>
 

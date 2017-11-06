@@ -45,7 +45,7 @@
   </div>
   <div class="top-bar-right">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li><a  href="/" class="menu-option show-for-small-only"><img src="images/mom-logo-nav.png" class="logo-nav"></a>
+        <li><a  href="/" class="menu-option show-for-small-only"><img src="{% static 'images/mom-logo-nav.png' %}" class="logo-nav"></a>
       <li><a class="menu-option" href="/about">About Us</a></li>
        <li><a class="menu-option" href="/services">Services</a></li>
        <li><a  class="menu-option" href="/contact">Consultations</a></li>
@@ -57,8 +57,9 @@
 
  <!-- Parralax window at the top  -->
    {% if pagename == "Above the Noise Communications" %}
- <div  class="parallax-window" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
+ <div  class="parallax-window hide-for-small-only" data-parallax="scroll" data-image-src="{% static 'images/moms-hero-image.jpg' %}"
  data-ios-fix="" data-android-fix=""></div>
+  <img class="parallax-window-small show-for-small-only" src= "{% static 'images/moms-hero-image.jpg' %}" />
    {% endif %}
 
    {% if pagename != "Above the Noise Communications" %}
@@ -80,7 +81,7 @@
    </div>
 <h1 class="text-center headline">{{pagename}}</h1>
 
-   <a href="#form" rel="modal:open" class="secondary button hero-button cons-button" >Get In Touch</a>
+   <a href="#form" rel="modal:open" class="secondary button hero-button cons-button hide-for-small-only" >Get In Touch</a>
 
 </div>
   </div>

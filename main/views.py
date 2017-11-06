@@ -6,7 +6,7 @@ import json
 
 
 from django.shortcuts import render, redirect
-from .models import Post
+from .models import Post, profilePic
 from .forms import contactForm
 from django.conf import settings
 from django.core.mail import send_mail
@@ -20,8 +20,11 @@ def home(request):
     return render(request, template, context)
 
 def about(request):
+    pic = profilePic.objects.all().first()
     pagename = "About"
-    context = {"pagename": pagename}
+    context = {"pagename": pagename,
+            "profilePic": pic,
+    }
     template = "about.html"
     return render(request, template, context)
 
@@ -41,7 +44,7 @@ def contact(request):
 
 def blog(request):
     the_posts = Post.objects.order_by('-date')
-    pagename = "News"
+    pagename = "News Feed"
     context = {"pagename": pagename, "the_posts": the_posts}
     template = "blog.html"
     return render(request, template, context)
@@ -69,7 +72,7 @@ def process(request):
 
         #captcha end
 
-            print request.POST
+
             flash = None
             name=form.cleaned_data['name']
             comment=form.cleaned_data['comment']
@@ -90,7 +93,7 @@ def process(request):
 
 def thanks(request):
     form = contactForm()
-    pagename = "thanks"
+    pagename = "Thanks"
     context = {"pagename": pagename}
     template = "thanks.html"
     return render(request, template, context)

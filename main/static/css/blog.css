@@ -1,3 +1,41 @@
 .about-headline {
   padding-top:  50px;
 }
+
+
+.scroll-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: auto;
+
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+  padding: bottom: 20px;
+}
+
+div#demo.blog-table-wrapper.scroll-text {
+margin: auto;
+text-align: center;
+  height: 500px;
+}
+
+
+.headline-left {
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.headline-right {
+  margin-left: 30px;
+  padding-left: 30px;
+}
+
+
+.the_post{
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
