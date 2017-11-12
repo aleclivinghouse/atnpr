@@ -15,15 +15,15 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-EMAIL_HOST = 'mail.atnpr.com'
-EMAIL_HOST_USER = 'sandra@atnpr.com'
-EMAIL_HOST_PASSWORD = 'Larry555!'
-EMAIL_PORT = '26'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'aleclivinghouse@gmail.com'
+EMAIL_HOST_PASSWORD = 'Voodoo12'
+EMAIL_PORT = '587'
 #this is the port for gmail
 EMAIL_USE_TLS = True
 
 
-GOOGLE_RECAPTCHA_SECRET_KEY = '6LfMTDQUAAAAAHg52yWXHuPmYOQGTtjOjWPJOjT-'
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LdzUDgUAAAAAE8_I0Q266yOKC7INpriLQo9q-JF'
 
 
 # Quick-start development settings - unsuitable for production
